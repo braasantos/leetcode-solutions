@@ -1,7 +1,9 @@
-long	reverse_n(long n)
+#include <stdbool.h>
+
+long reverse_n(long n)
 {
 	long rev = 0;
-	while(n > 0)
+	while (n > 0)
 	{
 		rev = (rev * 10) + (n % 10);
 		n /= 10;
@@ -9,7 +11,7 @@ long	reverse_n(long n)
 	return (rev);
 }
 
-bool	isPalindrome(int x)
+bool isPalindrome(int x)
 {
 	int n = reverse_n(x);
 	if (x == n)
